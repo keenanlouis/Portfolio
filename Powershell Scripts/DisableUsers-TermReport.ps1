@@ -1,19 +1,18 @@
 <#
 .SYNOPSIS
-
+    This script will take a CSV file and parse through the users, search AD for the user object and then perform actions on those objects. 
 .DESCRIPTION
-
+    This script will take a CSV file and parse through the users, search AD for the user object and then perform actions on those objects.
+    This will disable users that are found, and also generate a report of the users that were disabled.
+    This will also output a report of users that are not exact matches in AD but may have some similarities. This will then allow the
+    user to disable those users manually or by editing the CSV file that is generated. 
 .OUTPUTS
-
+    A report of the users that have been disabled. 
 .EXAMPLE
-
+    DisabledUsers-TermReport.ps1
 .NOTES
-
-.AUTHOR
-    Keenan Louis
-    
-.DATE
-
+    Author: Keenan Louis
+    Date: 4/20/21
 #>
 
 Add-Type -AssemblyName System.Windows.Forms
